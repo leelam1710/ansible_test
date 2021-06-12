@@ -15,3 +15,10 @@
         msg: URL = {{ URL }}
       vars:
         URL: play.example.org
+
+- name: Demo on variables in CLI level
+  hosts: all
+  tasks:
+    - name: print URL1
+      debug:
+        msg: URL1 = {{ URL1 }}
