@@ -7,16 +7,16 @@
 
     - name: print uptime
       debug:
-        msg: {{ OUT }}
+        msg: "{{ OUT }}"
 
     - name: print uptime's std out key only
       debug:
-        msg: {{ OUT.stdout }}
+        msg: "{{ OUT.stdout }}"
 
     - name: set a variable
       set_fact:
-        UPTIME_OUTPUT: {{ OUT.stdout }}
+        UPTIME_OUTPUT: "{{ OUT.stdout }}"
 
     - name: print uptime
       debug:
-        msg: uptime = {{ UPTIME_OUTPUT }}
+        msg: "uptime = {{ UPTIME_OUTPUT }}"
