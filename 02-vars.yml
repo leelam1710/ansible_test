@@ -22,3 +22,11 @@
     - name: print URL1
       debug:
         msg: URL1 = {{ URL1 }}
+
+- name: Demo on variables in files vars
+  hosts: all
+  vars_files: vars.yml
+  tasks:
+    - name: print URL2
+      debug:
+        msg: URL_FILE = {{ URL_FILE }}
