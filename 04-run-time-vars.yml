@@ -3,7 +3,7 @@
   tasks:
     - name: grab uptime
       shell: uptime
-      register: OUT
+      register: OUT  # out of 2 ways one way is to use register module
 
     - name: print uptime
       debug:
@@ -14,7 +14,7 @@
         msg: "{{ OUT.stdout }}"
 
     - name: set a variable
-      set_fact:
+      set_fact: # the second way is to set a variable using the  set_fact module
         UPTIME_OUTPUT: "{{ OUT.stdout }}"
 
     - name: print uptime
