@@ -37,3 +37,14 @@
     - name: print URL2
       debug:
         msg: URL2 = {{ URL2 }}
+
+- name: Demo on variables in prompt
+  hosts: all
+  vars_prompt:
+    - name: URL3
+      prompt: Enter the URL3
+      private: no
+  tasks:
+    - name: print the URL3
+      debug:
+        msg: URL3 = {{ URL3 }}
