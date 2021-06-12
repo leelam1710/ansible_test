@@ -1,0 +1,22 @@
+- name: Demo on runtime variables
+  hosts: all
+  tasks:
+    - name: grab uptime
+      shell: uptime
+      register: OUT
+
+    - name: print uptime
+      debug:
+        msg: {{ OUT }}
+
+    - name: print uptime's std out key only
+      debug:
+        msg: {{ OUT.stdout }}
+
+    - name: set a variable
+      set_fact:
+        UPTIME_OUTPUT: {{ OUT.stdout }}
+
+    - name: print uptime
+      debug:
+        msg: uptime = {{ UPTIME_OUTPUT }}
