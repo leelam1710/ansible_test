@@ -1,0 +1,8 @@
+- name: Demo on variables in play level
+  hosts: all
+  vars:
+    URL: play.example.com
+  tasks:
+    - name: print URL
+      debug:
+        msg: URL = {{ URL }}
