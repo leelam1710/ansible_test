@@ -48,3 +48,5 @@
     - name: print the URL3
       debug:
         msg: URL3 = {{ URL3 }}
+
+# ansible-playbook -i inventory 02-vars.yml -e URL1=play.miak.com  -- command used for this playbook
