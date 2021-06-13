@@ -1,0 +1,12 @@
+- name: Demo on conditions in anisble
+  hosts: all
+  tasks:
+    - name: Print if Centos
+      debug:
+        msg: "this shit is centos"
+      when: "ansible_os_family == Redhat"
+
+    - name: Print if Other
+      debug:
+        msg: "this is not centos"
+      when: "anisble_os_family == windows"
