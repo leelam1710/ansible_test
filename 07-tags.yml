@@ -1,14 +1,14 @@
 - name: Demo on tags
   hosts: all
   tasks:
-    - name: print jois wastefellow
+    - name: print if centos
       debug:
-        msg: "jois aka wastefellow"
+        msg: "this is centos machine"
       tags:
-        - jois
+        - redhat
 
-    - name: print no she is not
+    - name: print if windows machine
       debug:
-        msg: she is a gundufellow
+        msg: "this is windows machina"
       tags:
-        - good
+        - windows
