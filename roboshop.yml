@@ -4,7 +4,7 @@
   tasks:
     - name: import frontend
       ansible.builtin.import_role:
-        name:
+        name: frontend
       tags: frontend
       #when: APP == "frontend"
 
