@@ -1,0 +1,14 @@
+- name: Demo on tags
+  hosts: all
+  tasks:
+    - name: print jois wastefellow
+      debug:
+        msg: "jois aka wastefellow"
+      tags:
+        - jois
+
+    - name: print no she is not
+      debug:
+        msg: she is good wastefellow
+      tags:
+        - good
