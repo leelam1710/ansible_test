@@ -9,4 +9,4 @@
     - name: Print if Other
       debug:
         msg: "this is not centos"
-      when: "anisble_os_family == windows"
+      when: "ansible_os_family == windows"
