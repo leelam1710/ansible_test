@@ -1,3 +1,12 @@
-- name: Print
-  debug:
-    msg: Hello from frontend
+- name: install nginx
+  yum:
+    name: nginx
+    state: present
+
+- name: download {{ APP }} components
+  include_role:
+    name: common
+    tasks_from: curl_download
+  vars:
+    URL: "https://github.com/roboshop-devops-project/frontend/archive/main.zip"
+    EXTRACT_DIR: /usr/share/nginx/html
