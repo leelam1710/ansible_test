@@ -20,5 +20,9 @@
     remote_src: yes
 
 - name: Rename the Htdocs directory
+  shell: mv /usr/share/nginx/html/frontend-main/* /usr/share/nginx/html/
+  when: APP == "frontend"
+
+- name: Rename the Htdocs directory
   shell: mv /usr/share/nginx/html/static/* /usr/share/nginx/html/
   when: APP == "frontend"
