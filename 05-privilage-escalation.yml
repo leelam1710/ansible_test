@@ -4,4 +4,4 @@
     - shell: id
       register: waste
     - debug:
-        msg: "{{ waste }}"
+        msg: "{{ waste.stdout }}"
