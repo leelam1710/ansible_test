@@ -1,0 +1,10 @@
+- name: setup roboshop Project
+  hosts: all
+  become: yes
+  tasks:
+    - name: import frontend
+      ansible.builtin.import_role:
+        name: frontend
+      tag:
+        - frontend
+      when: APP == "frontend"
