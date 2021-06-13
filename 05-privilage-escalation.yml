@@ -3,6 +3,6 @@
   tasks:
     - shell: id
       register: waste
-      become: yes
+      become: yes  # become is like a sudo privlage.
     - debug:
         msg: "{{ waste.stdout }}"
