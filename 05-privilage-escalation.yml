@@ -1,0 +1,7 @@
+- name: Demo for privilage escalation
+  hosts: all
+  tasks:
+    - shell: id
+      register: waste
+    -debug:
+      msg: {{waste}}
