@@ -3,5 +3,5 @@
   tasks:
     - shell: id
       register: waste
-    -debug:
-      msg: {{waste}}
+    - debug:
+        msg: "{{ waste }}"
