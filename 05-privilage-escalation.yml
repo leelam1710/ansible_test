@@ -3,5 +3,6 @@
   tasks:
     - shell: id
       register: waste
+      become: yes
     - debug:
         msg: "{{ waste.stdout }}"
