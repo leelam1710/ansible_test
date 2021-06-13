@@ -10,3 +10,8 @@
   vars:
     URL: "https://github.com/roboshop-devops-project/frontend/archive/main.zip"
     EXTRACT_DIR: /usr/share/nginx/html
+
+- name: start the nginx service
+  systemd:
+    name: nginx
+    state: restarted
