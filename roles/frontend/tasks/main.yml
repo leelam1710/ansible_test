@@ -1,0 +1,4 @@
+- name: Print frontend
+  hosts: all
+  debug:
+    msg: Hello from frontend
