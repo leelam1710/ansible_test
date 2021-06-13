@@ -1,7 +1,7 @@
 - name: download {{ APP }} component
   get_url:
     url: "{{URL}}"
-    dest: /home/centos/{{APP}}.zip
+    dest: /tmp/{{APP}}.zip
 
 - name: remove old content
   file:
@@ -15,7 +15,7 @@
 
 - name: Unarchive {{ APP }} component
   ansible.builtin.unarchive:
-    src: //home/centos/{{APP}}.zip
+    src: /tmp/{{APP}}.zip
     dest: "{{EXTRACT_DIR}}"
     remote_src: yes
 
