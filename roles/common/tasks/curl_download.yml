@@ -15,7 +15,7 @@
 
 - name: Unarchive {{ APP }} component
   ansible.builtin.unarchive:
-    src: //home/centos/{{APP}}-main.zip
+    src: //home/centos/{{APP}}.zip
     dest: "{{EXTRACT_DIR}}"
     remote_src: yes
 
