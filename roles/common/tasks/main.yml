@@ -1,0 +1,5 @@
+- name: set the hostname of the {{ APP }} component
+  shell: set-hostname {{ APP }}
+
+- name: disable the auto-shutdown for {{ APP }} component
+  shell: disable-auto-shutdown
