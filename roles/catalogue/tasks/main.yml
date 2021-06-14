@@ -26,7 +26,7 @@
     replace: 'mongodb-{{ENV}}.testops.ml'
 
 - name: setup systemD script
-  ansible.builtin.shell: mv mv /home/roboshop/catalogue-main/catalogue-main/systemd.service /etc/systemd/system/catalogue.service
+  ansible.builtin.shell: mv /home/roboshop/catalogue-main/catalogue-main/systemd.service /etc/systemd/system/catalogue.service
 
 - name:  start the {{ APP }} service and Enable service
   ansible.builtin.systemd:
