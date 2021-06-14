@@ -1,7 +1,7 @@
 - name: install NodeJS
   yum:
     name:
-      - nodesjs
+      - nodejs
       - make
       - gcc-c++
 
