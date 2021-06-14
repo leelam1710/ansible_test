@@ -21,7 +21,7 @@
 
 - name: update the IP address of MONGODB Server in systemd.service file
   ansible.builtin.replace:
-    path: /home/roboshop/catalogue-main/systemd.service
+    path: /home/roboshop/catalogue-main/catalogue-main/systemd.service
     regexp: 'MONGO_DNSNAME'
     replace: 'mongodb-{{ENV}}.testops.ml'
 
