@@ -34,4 +34,4 @@
     - catalogue.js
     - user.js
   args:
-    chdir: /tmp/mongodb
+    chdir: /tmp/mongodb/mongodb-main
