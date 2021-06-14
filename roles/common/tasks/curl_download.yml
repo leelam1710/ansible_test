@@ -2,6 +2,7 @@
   get_url:
     url: "{{URL}}"
     dest: /home/centos/{{APP}}.zip
+  become_user: "{{APP_USER}}"
 
 - name: remove old content
   file:
