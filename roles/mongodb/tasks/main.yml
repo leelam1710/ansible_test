@@ -1,6 +1,6 @@
 - name: copy mongodb repo file
   copy:
-    src: mongodb.repo
+    src: files/mongodb.repo
     dest: /etc/yum.repo.d/
     remote_src: yes
 
