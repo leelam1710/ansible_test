@@ -32,6 +32,6 @@
   ansible.builtin.shell: mongo < {{item}}
   loop:
     - catalogue.js
-    - user.js
+    - users.js
   args:
     chdir: /tmp/mongodb/mongodb-main
