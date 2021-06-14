@@ -8,11 +8,11 @@
     path: "{{EXTRACT_DIR}}"
     state: absent
 
-#- name: create directory for {{ APP }} component
-#  file:
-#    path: "{{EXTRACT_DIR}}"
-#    state: directory
-#  #become_user: "{{APP_USER}}"
+- name: create directory for {{ APP }} component
+  file:
+    path: "{{EXTRACT_DIR}}"
+    state: directory
+  #become_user: "{{APP_USER}}"
 
 - name: Unarchive {{ APP }} component
   ansible.builtin.unarchive:
