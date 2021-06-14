@@ -6,5 +6,5 @@
 
 - name: create roboshop user
   ansible.builtin.user:
-    name: Roboshop
+    name: roboshop
   when: APP == "catalogue" or APP == "user" or APP == "cart" or APP == "shipping" or APP == "payment"

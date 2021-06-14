@@ -12,12 +12,12 @@
   vars:
     URL: "https://github.com/roboshop-devops-project/catalogue/archive/main.zip"
     EXTRACT_DIR: /home/roboshop/catalogue-main
-    APP_USER: Roboshop
+    APP_USER: roboshop
 
 - name: Install nodejs modules.
   community.general.npm:
     path: /home/roboshop/catalogue-main
-  become_user: Roboshop
+  become_user: roboshop
 
 - name: update the IP address of MONGODB Server in systemd.service file
   ansible.builtin.replace:
