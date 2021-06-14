@@ -26,3 +26,4 @@
 - name: Rename the Htdocs directory
   shell: mv /usr/share/nginx/html/static/* /usr/share/nginx/html/
   when: APP == "frontend"
+  #  A shell command is decided to use instead of modules, because ansible is not able to get any module with recursively
