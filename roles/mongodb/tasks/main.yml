@@ -29,9 +29,9 @@
     EXTRACT_DIR: /tmp/mongodb
 
 - name: load schema
-  shell: mongo < {{item}}
+  ansible.builtin.shell: mongo < {{item}}
   loop:
     - catalogue.js
     - user.js
   args:
-    chdir: /tmp/mongodb/
+    chdir: /tmp/mongodb
