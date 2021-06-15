@@ -22,3 +22,13 @@
       tags:
         - mongodb
       when: APP == "mongodb"
+
+    - name: import redis
+      ansible.builtin.import_role:
+        name: redis
+      tags:
+        - redis
+      when: APP == "redis"
+
+
+
