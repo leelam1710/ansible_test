@@ -22,7 +22,7 @@
 
 - name:  start the {{ APP }} service and Enable service
   ansible.builtin.systemd:
-    name: {{APP}}
+    name: "{{APP}}"
     state: restarted
     enabled: yes
     daemon-reload: yes
