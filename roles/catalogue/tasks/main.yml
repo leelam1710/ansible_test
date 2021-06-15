@@ -5,14 +5,14 @@
       - make
       - gcc-c++
 
-#- name: download {{ APP }} schema
-#  include_role:
-#    name: common
-#    tasks_from: curl_download
-#  vars:
-#    URL: "https://github.com/roboshop-devops-project/catalogue/archive/main.zip"
-#    EXTRACT_DIR: /home/roboshop/catalogue-main
-#    APP_USER: roboshop
+- name: download {{ APP }} schema
+  include_role:
+    name: common
+    tasks_from: curl_download
+  vars:
+    URL: "https://github.com/roboshop-devops-project/catalogue/archive/main.zip"
+    EXTRACT_DIR: /home/roboshop/
+    APP_USER: roboshop
 #
 #- name: Install nodejs modules.
 #  community.general.npm:
