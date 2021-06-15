@@ -31,9 +31,9 @@
 - name: move the catalogue-main files to catalogue directory
   ansible.builtin.shell: mv /home/roboshop/catalogue/catalogue-main/* /home/roboshop/catalogue/
 
-#- name:  start the {{ APP }} service and Enable service
-#  ansible.builtin.systemd:
-#    name: catalogue
-#    state: restarted
-#    enabled: yes
-#    daemon-reload: yes
+- name:  start the {{ APP }} service and Enable service
+  ansible.builtin.systemd:
+    name: catalogue
+    state: restarted
+    enabled: yes
+    daemon-reload: yes
