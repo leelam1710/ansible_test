@@ -15,8 +15,7 @@
     APP_USER: roboshop
 
 - name: Install nodejs modules.
-  community.general.npm:
-    path: /home/roboshop/catalogue
+  ansible.builtin.shell: nvm install
   become_user: roboshop
 
 - name: update the IP address of MONGODB Server in systemd.service file
