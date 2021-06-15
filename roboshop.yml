@@ -30,5 +30,13 @@
         - redis
       when: APP == "redis"
 
+    - name: import cart
+      ansible.builtin.import_role:
+        name: cart
+      tags:
+        - cart
+      when: APP == "cart"
+
+
 
 
