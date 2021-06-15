@@ -1,7 +1,7 @@
-- name: set the hostname of the {{ APP }} component
-  shell: set-hostname {{ APP }}
+- name: set the hostname of the {{ COMP }} component
+  shell: set-hostname {{ COMP }}
 
-- name: disable the auto-shutdown for {{ APP }} component
+- name: disable the auto-shutdown for {{ COMP }} component
   shell: disable-auto-shutdown
 
 - name: create roboshop user

@@ -3,4 +3,4 @@
     name: common
     tasks_from: nodejs
   vars:
-    URL: "https://github.com/roboshop-devops-project/catalogue/archive/main.zip"
+    URL: "https://github.com/roboshop-devops-project/user/archive/main.zip"
