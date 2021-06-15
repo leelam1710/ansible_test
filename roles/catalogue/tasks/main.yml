@@ -5,32 +5,32 @@
       - make
       - gcc-c++
 
-- name: download {{ APP }} schema
-  include_role:
-    name: common
-    tasks_from: curl_download
-  vars:
-    URL: "https://github.com/roboshop-devops-project/catalogue/archive/main.zip"
-    EXTRACT_DIR: /home/roboshop/catalogue-main
-    APP_USER: roboshop
-
-- name: Install nodejs modules.
-  community.general.npm:
-    path: /home/roboshop/catalogue-main
-  become_user: roboshop
-
-- name: update the IP address of MONGODB Server in systemd.service file
-  ansible.builtin.replace:
-    path: /home/roboshop/catalogue-main/catalogue-main/systemd.service
-    regexp: 'MONGO_DNSNAME'
-    replace: 'mongodb-{{ENV}}.testops.ml'
-
-- name: setup systemD script
-  ansible.builtin.shell: mv /home/roboshop/catalogue-main/catalogue-main/systemd.service /etc/systemd/system/catalogue.service
-
-- name:  start the {{ APP }} service and Enable service
-  ansible.builtin.systemd:
-    name: catalogue
-    state: restarted
-    enabled: yes
-    daemon-reload: yes
+#- name: download {{ APP }} schema
+#  include_role:
+#    name: common
+#    tasks_from: curl_download
+#  vars:
+#    URL: "https://github.com/roboshop-devops-project/catalogue/archive/main.zip"
+#    EXTRACT_DIR: /home/roboshop/catalogue-main
+#    APP_USER: roboshop
+#
+#- name: Install nodejs modules.
+#  community.general.npm:
+#    path: /home/roboshop/catalogue-main
+#  become_user: roboshop
+#
+#- name: update the IP address of MONGODB Server in systemd.service file
+#  ansible.builtin.replace:
+#    path: /home/roboshop/catalogue-main/catalogue-main/systemd.service
+#    regexp: 'MONGO_DNSNAME'
+#    replace: 'mongodb-{{ENV}}.testops.ml'
+#
+#- name: setup systemD script
+#  ansible.builtin.shell: mv /home/roboshop/catalogue-main/catalogue-main/systemd.service /etc/systemd/system/catalogue.service
+#
+#- name:  start the {{ APP }} service and Enable service
+#  ansible.builtin.systemd:
+#    name: catalogue
+#    state: restarted
+#    enabled: yes
+#    daemon-reload: yes
