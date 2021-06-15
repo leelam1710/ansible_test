@@ -28,9 +28,9 @@
 - name: setup systemD script
   ansible.builtin.shell: mv /home/roboshop/catalogue/catalogue-main/systemd.service /etc/systemd/system/catalogue.service
 
-#- name:  start the {{ APP }} service and Enable service
-#  ansible.builtin.systemd:
-#    name: catalogue
-#    state: restarted
-#    enabled: yes
-#    daemon-reload: yes
+- name:  start the {{ APP }} service and Enable service
+  ansible.builtin.systemd:
+    name: catalogue
+    state: restarted
+    enabled: yes
+    daemon-reload: yes
