@@ -20,3 +20,6 @@
   npm:
     path: /home/roboshop/{{APP}}
   become_user: roboshop
+
+- name: download {{ APP }} schema
+  ansible.builtin.include_tasks: systemd.yml
