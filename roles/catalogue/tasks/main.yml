@@ -18,12 +18,12 @@
   community.general.npm:
     path: /home/roboshop/catalogue
   become_user: roboshop
-#
-#- name: update the IP address of MONGODB Server in systemd.service file
-#  ansible.builtin.replace:
-#    path: /home/roboshop/catalogue-main/catalogue-main/systemd.service
-#    regexp: 'MONGO_DNSNAME'
-#    replace: 'mongodb-{{ENV}}.testops.ml'
+
+- name: update the IP address of MONGODB Server in systemd.service file
+  ansible.builtin.replace:
+    path: /home/roboshop/catalogue/catalogue-main/systemd.service
+    regexp: 'MONGO_DNSNAME'
+    replace: 'mongodb-{{ENV}}.testops.ml'
 #
 #- name: setup systemD script
 #  ansible.builtin.shell: mv /home/roboshop/catalogue-main/catalogue-main/systemd.service /etc/systemd/system/catalogue.service
