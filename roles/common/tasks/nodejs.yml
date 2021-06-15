@@ -11,7 +11,12 @@
     EXTRACT_DIR: /home/roboshop/{{APP}}
     APP_USER: roboshop
 
-- name: Install nodejs modules.
-  community.general.npm:
+#- name: Install nodejs modules.
+#  community.general.npm:
+#    path: /home/roboshop/{{APP}}
+#  become_user: roboshop
+
+- name: Install NodeJS Modules
+  npm:
     path: /home/roboshop/{{APP}}
   become_user: roboshop
