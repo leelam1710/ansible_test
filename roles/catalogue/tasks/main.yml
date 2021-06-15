@@ -15,9 +15,9 @@
     APP_USER: roboshop
 
 - name: Install nodejs modules.
-  shell: npm install
-#  community.general.npm:
-#    path: /home/roboshop/catalogue
+#  shell: npm install
+  npm:
+    path: /home/roboshop/catalogue
   become_user: roboshop
 
 
