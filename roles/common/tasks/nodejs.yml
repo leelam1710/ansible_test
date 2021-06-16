@@ -16,7 +16,7 @@
 #    path: /home/roboshop/{{APP}}
 #  become_user: roboshop
 - name: Install NodeJS Modules
-  ansible.builtin.shell: npm shell
+  ansible.builtin.shell: npm install
   args:
     chdir: home/roboshop/{{APP}}
   become_user: roboshop
