@@ -11,15 +11,16 @@
     EXTRACT_DIR: /home/roboshop/{{APP}}
     APP_USER: roboshop
 
-#- name: Install nodejs modules.
-#  community.general.npm:
+#- name: Install NodeJS Modules
+#  npm:
 #    path: /home/roboshop/{{APP}}
 #  become_user: roboshop
-
 - name: Install NodeJS Modules
-  npm:
-    path: /home/roboshop/{{APP}}
+  ansible.builtin.shell: npm shell
+  args:
+    chdir: home/roboshop/{{APP}}
   become_user: roboshop
+
 
 - name: download {{ APP }} schema
   ansible.builtin.include_tasks: systemd.yml
