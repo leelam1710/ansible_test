@@ -37,6 +37,9 @@
         - cart
       when: APP == "cart"
 
-
-
-
+    - name: import user
+      ansible.builtin.import_role:
+        name: user
+      tags:
+        - user
+      when: APP == "user"
