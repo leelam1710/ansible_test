@@ -41,7 +41,7 @@
     - name: Reset MySQL Password
       ansible.builtin.shell: mysql --connect-expired-password -uroot -p"{{PASSWORD.stdout}}" < /tmp/password.sql
 
-- name: Download {{ APP }} Schema
+- name: Download {{ COMP }} Schema
   include_role:
     name: common
     tasks_from: curl_download
