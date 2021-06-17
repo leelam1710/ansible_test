@@ -15,7 +15,7 @@
       - MySQL-python
     state: present
 
-- name: stsart mysql service
+- name: start mysql service
   ansible.builtin.systemd:
     name: mysqld
     state: started
