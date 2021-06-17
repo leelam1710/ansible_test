@@ -16,7 +16,7 @@
     state: present
 
 - name: stsart mysql service
-  ansible.builtin.yum:
+  ansible.builtin.systemd:
     name: mysqld
     state: started
     enabled: yes
