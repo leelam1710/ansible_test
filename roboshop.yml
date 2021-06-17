@@ -43,3 +43,17 @@
       tags:
         - user
       when: APP == "user"
+
+    - name: import mysql
+      ansible.builtin.import_role:
+        name: mysql
+      tags:
+        - mysql
+      when: APP == "mysql"
+
+    - name: import shipping
+      ansible.builtin.import_role:
+        name: shipping
+      tags:
+        - shipping
+      when: APP == "shipping"
