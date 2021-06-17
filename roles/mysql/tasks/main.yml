@@ -39,7 +39,7 @@
         dest: /tmp/password.sql
 
     - name: Reset MySQL Password
-      anisble.builtin.shell: mysql --connect-expired-password -uroot -p"{{PASSWORD.stdout}}" < /tmp/password.sql
+      ansible.builtin.shell: mysql --connect-expired-password -uroot -p"{{PASSWORD.stdout}}" < /tmp/password.sql
 
 - name: Download {{ APP }} Schema
   include_role:
