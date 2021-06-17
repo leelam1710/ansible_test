@@ -52,4 +52,4 @@
 
 
 - name: Load Schema
-  ansible.builtin.shell: mysql -uroot -ppassword < /tmp/mysql/shipping.sql
+  ansible.builtin.shell: mysql -uroot -ppassword < /tmp/mysql/mysql-main/shipping.sql
