@@ -9,7 +9,7 @@
 - name: install rabbitmq-server
   yum:
     name: rabbitmq-server
-    state: present
+    state: latest
 
 - name: start rabbitmq server
   systemd:
