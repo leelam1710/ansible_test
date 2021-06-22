@@ -1,6 +1,11 @@
 - name: install erlang
   yum:
     name: erlang
+    state: present
+
+- name: Upgrade all packages
+  yum:
+    name: '*'
     state: latest
 
 - name: Setup YUM repositories for RabbitMQ
