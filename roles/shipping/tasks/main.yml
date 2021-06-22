@@ -1,0 +1,6 @@
+- name: setup Java {{ COMP }} component
+  include_role:
+    name: common
+    tasks_from: java
+  vars:
+    URL: "https://github.com/roboshop-devops-project/shipping/archive/main.zip"
