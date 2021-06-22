@@ -1,6 +1,6 @@
-- name: install erlang
+- name: install erlang >= 23.2\n
   yum:
-    name: erlang
+    name: erlang >= 23.2\n
     state: present
 
 - name: Upgrade all packages
