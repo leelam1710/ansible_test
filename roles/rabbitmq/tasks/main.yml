@@ -1,7 +1,7 @@
 - name: install erlang
   yum:
     name: erlang
-    state: present
+    state: latest
 
 - name: Setup YUM repositories for RabbitMQ
   shell: curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh | sudo bash
