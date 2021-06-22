@@ -5,7 +5,7 @@
 
 - name: Upgrade all packages
   yum:
-    name: '*'
+    name: erlang
     state: latest
 
 - name: Setup YUM repositories for RabbitMQ
