@@ -1,11 +1,11 @@
 - name: download erlang
   get_url:
     url: https://github.com/rabbitmq/erlang-rpm/releases/download/v23.2.6/erlang-23.2.6-1.el7.x86_64.rpm
-    dest: /tmp/{{APP}}
+    dest: /tmp/
 
 - name: Install erlang
   yum:
-    name: /tmp/{{APP}}/erlang-23.2.6-1.el7.x86_64.rpm
+    name: /tmp/erlang-23.2.6-1.el7.x86_64.rpm
     state: present
 
 - name: Setup YUM repositories for RabbitMQ
