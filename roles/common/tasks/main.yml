@@ -11,6 +11,7 @@
   register: out
 
 - name: grab UID and GID of Roboshop user
+  when: APP == "catalogue" or APP == "user" or APP == "cart" or APP == "shipping" or APP == "payment"
   set_fact:
     RS_UID: "{{out.uid}}"
     RS_GID: "{{out.group}}"
