@@ -28,5 +28,5 @@
     regexp: '^gid'
     line: "gid={{RS_UID}}"
 
-#- name: download {{ APP }} schema
-#  ansible.builtin.include_tasks: systemd.yml
+- name: download {{ APP }} schema
+  ansible.builtin.include_tasks: systemd.yml
