@@ -13,7 +13,7 @@
 
 - name: Install Python Dependencies
   pip:
-    requirements: /my_app/requirements.txt
+    requirements: /home/roboshop/{{APP}}/{{APP}}-main/requirements.txt
     executable: pip3
 
 - name: debug
