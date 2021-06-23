@@ -1,0 +1,24 @@
+- name: install python3
+  yum:
+    name:
+      - python36
+      - gcc
+      - python3-devel
+
+- name: download {{ APP }} schema
+  ansible.builtin.include_tasks: curl_download.yml
+  vars:
+    EXTRACT_DIR: /home/roboshop/{{APP}}
+    APP_USER: roboshop
+
+- name: Install Python Dependencies
+  pip:
+    requirements: /my_app/requirements.txt
+    executable: pip3
+
+- name: debug
+  debug:
+    msg: "{{out}}"
+
+#- name: download {{ APP }} schema
+#  ansible.builtin.include_tasks: systemd.yml
