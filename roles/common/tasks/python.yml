@@ -16,9 +16,17 @@
     requirements: /home/roboshop/{{APP}}/{{APP}}-main/requirements.txt
     executable: pip3
 
-- name: debug
-  debug:
-    msg: "{{out}}"
+- name: Update User ID in payemnt configuration file
+  ansible.builtin.lineinfile:
+    path: /home/roboshop/{{APP}}/{{APP}}-main/payment.ini
+    regexp: '^uid'
+    line: "uid={{RS_UID}}"
+
+- name: Update Group ID in payemnt configuration file
+  ansible.builtin.lineinfile:
+    path: /home/roboshop/{{APP}}/{{APP}}-main/payment.ini
+    regexp: '^gid'
+    line: "gid={{RS_UID}}"
 
 #- name: download {{ APP }} schema
 #  ansible.builtin.include_tasks: systemd.yml
