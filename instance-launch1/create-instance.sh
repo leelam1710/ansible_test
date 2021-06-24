@@ -43,7 +43,7 @@ export IPADDRESS
 
 envsubst <record.json >/tmp/${component}.json
 
-aws route53 change-resource-record-sets --hosted-zone-id Z00339063TJYG8SBV0FZX --change-batch file:///tmp/${component}.json
+aws route53 change-resource-record-sets --hosted-zone-id Z0784318253PZRGQU972G --change-batch file:///tmp/${component}.json
 
 
 # This is for inventory file
