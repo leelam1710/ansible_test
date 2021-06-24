@@ -4,15 +4,15 @@
     regexp: "{{item.source}}"
     replace: "{{item.dest}}"
   loop:
-    - { source: "MONGO_DNSNAME", dest: "mongodb-{{ENV}}.testops.ml" }
-    - { source: "MONGO_ENDPOINT", dest: "mongodb-{{ENV}}.testops.ml" }
-    - { source: "REDIS_ENDPOINT", dest: "redis-{{ENV}}.testops.ml" }
-    - { source: "CATALOGUE_ENDPOINT", dest: "catalogue-{{ENV}}.testops.ml" }
-    - { source: "CARTHOST", dest: "cart-{{ENV}}.testops.ml" }
-    - { source: "USERHOST", dest: "user-{{ENV}}.testops.ml" }
-    - { source: "AMQPHOST", dest: "rabbitmq-{{ENV}}.testops.ml" }
-    - { source: "CARTENDPOINT", dest: "cart-{{ENV}}.testops.ml" }
-    - { source: "DBHOST", dest: "mysql-{{ENV}}.testops.ml" }
+    - { source: "MONGO_DNSNAME", dest: "mongodb-{{ENV}}.ironpress.ga" }
+    - { source: "MONGO_ENDPOINT", dest: "mongodb-{{ENV}}.ironpress.ga" }
+    - { source: "REDIS_ENDPOINT", dest: "redis-{{ENV}}.ironpress.ga" }
+    - { source: "CATALOGUE_ENDPOINT", dest: "catalogue-{{ENV}}.ironpress.ga" }
+    - { source: "CARTHOST", dest: "cart-{{ENV}}.ironpress.ga" }
+    - { source: "USERHOST", dest: "user-{{ENV}}.ironpress.ga" }
+    - { source: "AMQPHOST", dest: "rabbitmq-{{ENV}}.ironpress.ga" }
+    - { source: "CARTENDPOINT", dest: "cart-{{ENV}}.ironpress.ga" }
+    - { source: "DBHOST", dest: "mysql-{{ENV}}.ironpress.ga" }
 
 - name: setup systemD script
   ansible.builtin.shell: mv /home/roboshop/{{APP}}/{{APP}}-main/systemd.service /etc/systemd/system/{{APP}}.service

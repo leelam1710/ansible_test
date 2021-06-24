@@ -3,7 +3,7 @@
   "Changes": [{
     "Action": "UPSERT",
     "ResourceRecordSet": {
-      "Name": "${component}-aa.testops.ml",
+      "Name": "${component}-aa.ironpress.ga",
       "Type": "A",
       "TTL": 300,
       "ResourceRecords": [{ "Value": "${IPADDRESS}"}]
