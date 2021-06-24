@@ -17,7 +17,7 @@ if [ "${component}" == "all" ]; then
   export component
   export IPADDRESS
   envsubst <record.json >/tmp/${component}.json
-  aws route53 change-resource-record-sets --hosted-zone-id Z00339063TJYG8SBV0FZX --change-batch file:///tmp/${component}.json
+  aws route53 change-resource-record-sets --hosted-zone-id Z0784318253PZRGQU972G --change-batch file:///tmp/${component}.json
   sed -i -e "/${component}/ d" ../inventory
   PUBLIC_IPADDRESS=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=${component}" --query 'Reservations[*].Instances[*].PublicIpAddress' --output text)
   echo "${PUBLIC_IPADDRESS} APP=${component}" >>../inventory
