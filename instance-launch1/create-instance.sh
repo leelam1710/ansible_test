@@ -47,6 +47,6 @@ aws route53 change-resource-record-sets --hosted-zone-id Z0784318253PZRGQU972G -
 
 
 # This is for inventory file
-sed -i -e "/${component}/ d" /home/cloudshell-user/ansible_test/inventory
+sed -i -e "/${component}/ d" ../inventory
 PUBLIC_IPADDRESS=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=${component}" --query 'Reservations[*].Instances[*].PublicIpAddress' --output text)
-echo "${PUBLIC_IPADDRESS} APP=${component}" >>/home/cloudshell-user/ansible_test/inventory
+echo "${PUBLIC_IPADDRESS} APP=${component}" >>../inventory
